@@ -1,17 +1,30 @@
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
-import firebase from "firebase/app";
-import "firebase/firestore";
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
 
 import { ReactComponent as HangupIcon } from "./icons/hangup.svg";
 import { ReactComponent as MoreIcon } from "./icons/more-vertical.svg";
 import { ReactComponent as CopyIcon } from "./icons/copy.svg";
 
+/*import 'bootstrap/dist/css/bootstrap.min.css';*/
+import { Container, Row, Col } from 'react-bootstrap';
+import Stack from 'react-bootstrap/Stack'
+import Button from 'react-bootstrap/Button'
+import { AiOutlineClose } from "react-icons/ai";
 import "./App.css";
+import Header from "./header"
 
 // Initialize Firebase
 const firebaseConfig = {
-    // YOUR FIREBASE CONFIG HERE
+    apiKey: "AIzaSyDw72xsk46e4juzBpiVe06eRjRXhvbzeyk",
+    authDomain: "iotecs-e25f1.firebaseapp.com",
+    databaseURL: "https://iotecs-e25f1-default-rtdb.firebaseio.com",
+    projectId: "iotecs-e25f1",
+    storageBucket: "iotecs-e25f1.appspot.com",
+    messagingSenderId: "1095739551407",
+    appId: "1:1095739551407:web:3b0483a59866e977fbee5a",
+    measurementId: "G-G81N2GBND6"
 };
 
 if (!firebase.apps.length) {
@@ -60,6 +73,13 @@ function App() {
 
 function Menu({ joinCode, setJoinCode, setPage }) {
     return (
+        <div>
+            {/*<Stack direction="horizontal" className="headers" >
+                <Col style={{ color: "white", fontSize: 25, textAlign: "center" }}> Video Calling </Col>
+                <Button variant="outline-secondary" onClick={event => window.location.href = 'https://react-bootstrap.netlify.app/components/alerts/'}><AiOutlineClose style={{ color: "whitesmoke", fontSize: 25, fontWeight: "bold" }} /></Button>
+            </Stack>*/}
+            
+            <Header/>
         <div className="home">
             <div className="create box">
                 <button onClick={() => setPage("create")}>Create Call</button>
@@ -72,6 +92,7 @@ function Menu({ joinCode, setJoinCode, setPage }) {
                     placeholder="Join with code"
                 />
                 <button onClick={() => setPage("join")}>Answer</button>
+            </div>
             </div>
         </div>
     );
