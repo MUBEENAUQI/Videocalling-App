@@ -215,8 +215,25 @@ video {
 }
 
 .headers {
-    background-color: #212429;
-    height: 15%;
-    padding-inline: 1.5%;
-    padding-block: .8%;
+    
 }
+.onehead {
+    background-color: #212429;
+    height: 10%;
+    padding-inline: 1.5%;
+    padding-block: 2%;
+    flex-flow:column
+}
+
+.headtext{
+    text-align: center;
+    font-size:30px;
+    color:aliceblue;
+    font-family:'Global User Interface'
+}
+
+.closebutton {
+    background-color: #212429;
+    justify-content:end
+}
+

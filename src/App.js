@@ -74,11 +74,7 @@ function App() {
 function Menu({ joinCode, setJoinCode, setPage }) {
     return (
         <div>
-            {/*<Stack direction="horizontal" className="headers" >
-                <Col style={{ color: "white", fontSize: 25, textAlign: "center" }}> Video Calling </Col>
-                <Button variant="outline-secondary" onClick={event => window.location.href = 'https://react-bootstrap.netlify.app/components/alerts/'}><AiOutlineClose style={{ color: "whitesmoke", fontSize: 25, fontWeight: "bold" }} /></Button>
-            </Stack>*/}
-            
+           
             <Header/>
         <div className="home">
             <div className="create box">

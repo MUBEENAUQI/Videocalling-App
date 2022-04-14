@@ -9,13 +9,18 @@ import Button from 'react-bootstrap/Button'
 
 function Header() {
     return (
-        <Stack direction="horizontal" className="headers" >
-           
-            <Col style={{ color: "white", fontSize: 25, textAlign: "center" }}> Video Calling </Col>
-            <Button variant="outline-secondary" onClick={event => window.location.href = 'https://react-bootstrap.netlify.app/components/alerts/'}><AiOutlineClose style={{ color: "whitesmoke", fontSize: 25, fontWeight: "bold" }} /></Button>
-        </Stack>
 
-            /*<Col > <AiOutlineClose style={{ color: "whitesmoke", fontSize: 25, fontWeight: "bold" }} /></Col>*/
+        //<Stack direction="horizontal" className="headers" >
+
+        //    <Col style={{ color: "black", fontSize: 25, textAlign: "center" }}> Video Calling </Col>
+        //    <Button variant="dark" onClick={event => window.location.href = 'https://react-bootstrap.netlify.app/components/alerts/'}><AiOutlineClose style={{ color: "whitesmoke", fontSize: 25, fontWeight: "bold" }} /></Button>
+        //</Stack>
+
+        <div className="onehead">
+            <Button variant="dark" className="closebutton" onClick={event => window.location.href = 'https://react-bootstrap.netlify.app/components/alerts/'}><AiOutlineClose style={{ color: "whitesmoke", fontSize: 25, fontWeight: "bold" }} /></Button>
+            <div className="headtext">Video Calling</div>
+            
+        </div>
             
            
        
